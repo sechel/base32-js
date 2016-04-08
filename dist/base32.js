@@ -2,9 +2,10 @@
 
 // This would be the place to edit if you want a different
 // Base32 implementation
-
-var alphabet = '0123456789abcdefghjkmnpqrtuvwxyz'
-var alias = { o:0, i:1, l:1, s:5 }
+  var alphabet = '0123456789ABCDEFGHJKMNPQRTUVWXYZ'
+//var alphabet = '0123456789abcdefghjkmnpqrtuvwxyz'
+  var alias = { O:0, I:1, S:5 }
+//var alias = { o:0, i:1, l:1, s:5 }
 
 /**
  * Build a lookup table and memoize it
