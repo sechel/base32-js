@@ -219,18 +219,18 @@ function sha1(input, cb) {
     }
     return hash
 }
-sha1.file = function(filename, cb) {
-    if (filename == '-') {
-        process.stdin.resume()
-        return sha1(process.stdin, cb)
-    }
-    if (typeof fs == 'undefined') fs = require('fs')
-    return fs.stat(filename, function(err, stats) {
-        if (err) return cb(err, null)
-        if (stats.isDirectory()) return cb({ dir: true, message: "Is a directory" })
-        return sha1(require('fs').createReadStream(filename), cb)
-    })
-}
+//sha1.file = function(filename, cb) {
+//    if (filename == '-') {
+//        process.stdin.resume()
+//        return sha1(process.stdin, cb)
+//    }
+//    if (typeof fs == 'undefined') fs = require('fs')
+//    return fs.stat(filename, function(err, stats) {
+//        if (err) return cb(err, null)
+//        if (stats.isDirectory()) return cb({ dir: true, message: "Is a directory" })
+//        return sha1(require('fs').createReadStream(filename), cb)
+//    })
+//}
 
 var base32 = {
     Decoder: Decoder,
