@@ -189,7 +189,7 @@ function decode(input) {
  *     }
  *     base32.sha1.file('/my/file/path', console.log)
  */
-
+/*
 var crypto, fs
 function sha1(input, cb) {
     if (typeof crypto == 'undefined') crypto = require('crypto')
@@ -219,6 +219,7 @@ function sha1(input, cb) {
     }
     return hash
 }
+*/
 //sha1.file = function(filename, cb) {
 //    if (filename == '-') {
 //        process.stdin.resume()
@@ -236,8 +237,8 @@ var base32 = {
     Decoder: Decoder,
     Encoder: Encoder,
     encode: encode,
-    decode: decode,
-    sha1: sha1
+    decode: decode
+//    sha1: sha1
 }
 
 if (typeof window !== 'undefined') {
